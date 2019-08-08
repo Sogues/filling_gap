@@ -6,8 +6,8 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include <functional>
-
 #include <iostream>
+#include "RWLock.h"
 
 pthread_rwlock_t rwlock;
 int32_t a;
@@ -83,8 +83,88 @@ void unit2()
     std::cout << tv.tv_sec << " " << tv.tv_usec << std::endl;
 }
 
+namespace unit3
+{
+int val;
+RWLock rwlock;
+
+void* fun1(void* arg)
+{
+    rwlock.rdLock();
+    std::cout << "###读 id = " << *(int*)arg << " | val = " << val << std::endl;
+    rwlock.rdUnlock();
+}
+void* fun2(void* arg)
+{
+    rwlock.wrLock();
+    ++val;
+    std::cout << "$$$写 id = " << *(int*)arg << " | val = " << val << std::endl;
+    rwlock.wrUnlock();
+}
+
+#define UNIT3_RdThread(x) \
+    pthread_t rd##x;      \
+    int rdarg##x = x;     \
+    pthread_create(&rd##x, NULL, fun1, &rdarg##x);
+
+#define UNIT3_WrThread(x) \
+    pthread_t wr##x;      \
+    int wrarg##x = x;     \
+    pthread_create(&wr##x, NULL, fun2, &wrarg##x);
+
+#define UNIT3_RdJoin(x) pthread_join(rd##x, NULL);
+#define UNIT3_WrJoin(x) pthread_join(wr##x, NULL);
+
+void unit3()
+{
+    val = 0;
+    {
+        UNIT3_RdThread(1);
+        UNIT3_WrThread(1);
+        UNIT3_RdThread(2);
+        UNIT3_RdThread(3);
+        UNIT3_RdThread(4);
+        UNIT3_WrThread(2);
+        UNIT3_RdThread(5);
+        UNIT3_RdThread(6);
+        UNIT3_WrThread(3);
+        UNIT3_RdThread(7);
+        UNIT3_RdThread(8);
+        UNIT3_WrThread(4);
+        UNIT3_RdThread(9);
+        UNIT3_RdThread(10);
+        UNIT3_WrThread(5);
+        UNIT3_RdThread(11);
+        UNIT3_RdThread(12);
+        UNIT3_RdThread(13);
+        UNIT3_RdThread(14);
+
+        UNIT3_RdJoin(1);
+        UNIT3_RdJoin(2);
+        UNIT3_RdJoin(3);
+        UNIT3_RdJoin(4);
+        UNIT3_RdJoin(5);
+        UNIT3_RdJoin(6);
+        UNIT3_RdJoin(7);
+        UNIT3_RdJoin(8);
+        UNIT3_RdJoin(9);
+        UNIT3_RdJoin(10);
+        UNIT3_RdJoin(11);
+        UNIT3_RdJoin(12);
+        UNIT3_RdJoin(13);
+        UNIT3_RdJoin(14);
+
+        UNIT3_WrJoin(1);
+        UNIT3_WrJoin(2);
+        UNIT3_WrJoin(3);
+        UNIT3_WrJoin(4);
+        UNIT3_WrJoin(5);
+    }
+}
+}  // namespace unit3
+
 int main()
 {
-    unit2();
+    unit3::unit3();
     return 0;
 }
