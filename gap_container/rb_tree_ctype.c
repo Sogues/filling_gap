@@ -1,4 +1,9 @@
 #include "rb_tree_ctype.h"
+#include <stddef.h>
+
+void rb_tree_left_rotate(rb_tree_node_t** root, rb_tree_node_t* node, rb_tree_node_t* sentinel);
+void rb_tree_right_rotate(rb_tree_node_t** root, rb_tree_node_t* node, rb_tree_node_t* sentinel);
+rb_tree_node_t* rb_tree_min_right(rb_tree_node_t* node, rb_tree_node_t* sentinel);
 
 void rb_tree_insert(rb_tree_t* tree, rb_tree_node_t* node)
 {

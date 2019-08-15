@@ -1,8 +1,8 @@
 #ifndef RB_TREE_CTYPE_H
 #define RB_TREE_CTYPE_H
 
-typedef rb_tree_node_s rb_tree_node_t;
-typedef rb_tree_s rb_tree_t;
+typedef struct rb_tree_node_s rb_tree_node_t;
+typedef struct rb_tree_s rb_tree_t;
 
 typedef int rb_node_color_t;
 
@@ -11,21 +11,21 @@ typedef int rb_node_color_t;
 
 typedef void (*rb_tree_insert_pt)(rb_tree_node_t* root, rb_tree_node_t* node, rb_tree_node_t* sentinel);
 
-typedef struct
+struct rb_tree_node_s
 {
     void* key;
     rb_tree_node_t* parent;
     rb_tree_node_t* left;
     rb_tree_node_t* right;
     rb_node_color_t color;
-} rb_tree_node_s;
+};
 
-typedef struct
+struct rb_tree_s
 {
     rb_tree_node_t* root;
     rb_tree_node_t* sentinel;
     rb_tree_insert_pt insert;
-} rb_tree_s;
+};
 
 #define INIT_RB_TREE_NODE(node) (node)->color = rb_node_color_Black
 
