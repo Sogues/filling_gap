@@ -9,3 +9,5 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wall -Wno-unused-variable
 # 包含子项目。
 add_subdirectory ("gap_pthread")
 add_subdirectory ("gap_container")
+add_subdirectory ("gap_test")
+add_subdirectory ("gap_leetcode")
