@@ -5,6 +5,7 @@
 #include "output_contest_matches.h"
 #include "reveal_cards_in_increasing_order.h"
 #include "sparse_matrix_multiplication.h"
+#include "subsets.h"
 
 int main()
 {
@@ -14,6 +15,7 @@ int main()
     // Reveal_Cards_In_Increasing_Order::Solution::Test();
     // Sparse_Matrix_Multiplication::Solution::Test();
     // Output_Contest_Matches::Solution::Test();
-    Maximum_Binary_Tree::Solution::Test();
+    // Maximum_Binary_Tree::Solution::Test();
+    Subsets::Solution::Test();
     return 0;
 }
