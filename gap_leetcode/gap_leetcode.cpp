@@ -1,4 +1,5 @@
 #include "binary_tree_upside_down.h"
+#include "decode_string.h"
 #include "ecode_and_decode_tinyurl.h"
 #include "lru_cache.h"
 #include "max_increase_to_keep_city_skyline.h"
@@ -26,6 +27,7 @@ int main()
     // Binary_Tree_Upside_Down::Solution::Test();
     // LRU_Cache::LRUCache::Test();
     // Reverse_Linked_List::Solution::Test();
-    Reverse_Linked_List_II::Solution::Test();
+    // Reverse_Linked_List_II::Solution::Test();
+    Decode_String::Solution::Test();
     return 0;
 }
