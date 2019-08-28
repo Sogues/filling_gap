@@ -6,6 +6,7 @@
 #include "maximum_binary_tree.h"
 #include "nested_list_weight_sum_ii.h"
 #include "output_contest_matches.h"
+#include "permutations.h"
 #include "reveal_cards_in_increasing_order.h"
 #include "reverse_linked_list.h"
 #include "reverse_linked_list_ii.h"
@@ -28,6 +29,7 @@ int main()
     // LRU_Cache::LRUCache::Test();
     // Reverse_Linked_List::Solution::Test();
     // Reverse_Linked_List_II::Solution::Test();
-    Decode_String::Solution::Test();
+    // Decode_String::Solution::Test();
+    Permutation::Solution::Test();
     return 0;
 }
