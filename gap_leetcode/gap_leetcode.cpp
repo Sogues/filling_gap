@@ -13,6 +13,7 @@
 #include "sparse_matrix_multiplication.h"
 #include "spiral_matrix_ii.h"
 #include "subsets.h"
+#include "the_maze_ii.h"
 
 int main()
 {
@@ -30,6 +31,7 @@ int main()
     // Reverse_Linked_List::Solution::Test();
     // Reverse_Linked_List_II::Solution::Test();
     // Decode_String::Solution::Test();
-    Permutation::Solution::Test();
+    // Permutation::Solution::Test();
+    The_Maze_II::Solution::Test();
     return 0;
 }
