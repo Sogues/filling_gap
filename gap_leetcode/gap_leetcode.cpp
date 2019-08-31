@@ -1,6 +1,7 @@
 #include "binary_tree_upside_down.h"
 #include "decode_string.h"
 #include "ecode_and_decode_tinyurl.h"
+#include "linked_list_random_node.h"
 #include "lru_cache.h"
 #include "max_increase_to_keep_city_skyline.h"
 #include "maximum_binary_tree.h"
@@ -32,6 +33,7 @@ int main()
     // Reverse_Linked_List_II::Solution::Test();
     // Decode_String::Solution::Test();
     // Permutation::Solution::Test();
-    The_Maze_II::Solution::Test();
+    // The_Maze_II::Solution::Test();
+    Linked_List_Random_Node::Solution::Test();
     return 0;
 }
