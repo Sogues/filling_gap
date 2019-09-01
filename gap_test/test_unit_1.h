@@ -35,8 +35,13 @@ void test1()
     B c;
     std::cout << c.d << std::endl;
 }
+void test2()
+{
+    bool a = 1 << 10;
+    std::cout << (int32_t)a << std::endl;
+}
 void Test()
 {
-    test1();
+    test2();
 }
 }  // namespace test_unit_1
