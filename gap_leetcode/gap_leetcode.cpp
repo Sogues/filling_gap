@@ -5,6 +5,7 @@
 #include "lru_cache.h"
 #include "max_increase_to_keep_city_skyline.h"
 #include "maximum_binary_tree.h"
+#include "minimum_increment_to_make_array_unique.h"
 #include "nested_list_weight_sum_ii.h"
 #include "output_contest_matches.h"
 #include "permutations.h"
@@ -34,6 +35,7 @@ int main()
     // Decode_String::Solution::Test();
     // Permutation::Solution::Test();
     // The_Maze_II::Solution::Test();
-    Linked_List_Random_Node::Solution::Test();
+    // Linked_List_Random_Node::Solution::Test();
+    Minimum_Increment_To_Make_Array_Unique::Solution::Test();
     return 0;
 }
