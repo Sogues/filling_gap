@@ -6,12 +6,10 @@
 
 namespace Encode_And_Decode_TinyURL
 {
-using std::string;
-
-//  algorithm
 //  535.Encode and Decode TinyURL
 //  535.TinyURL 的加密与解密
-// https://leetcode-cn.com/problems/encode-and-decode-tinyurl/
+//  https://leetcode-cn.com/problems/encode-and-decode-tinyurl/
+using std::string;
 class Solution
 {
     // http://tinyurl.com/4e9iAk.
