@@ -4,11 +4,10 @@
 
 namespace Nested_List_Weight_Sum_II
 {
-using std::vector;
-//  algorithm
 //  364.加权嵌套序列和 II
 //  364.Nested List Weight Sum II
 //  https://leetcode-cn.com/problems/nested-list-weight-sum-ii/
+using std::vector;
 class NestedInteger
 {
   public:
