@@ -3,11 +3,10 @@
 
 namespace Max_Increase_To_Keep_City_Skyline
 {
-using std::vector;
-//  algorithm
 //  807.保持城市天际线
 //  807.Max Increase to Keep City Skyline
 //  https://leetcode.com/problemset/all/?search=807
+using std::vector;
 class Solution
 {
   public:
@@ -57,10 +56,12 @@ class Solution
 
     static void Test()
     {
-        vector<vector<int>> grid = {{3, 0, 8, 4}, {2, 4, 5, 7}, {9, 2, 6, 3}, {0, 3, 1, 0}};
-        Solution solution;
         std::cout << "=============" << std::endl;
-        std::cout << solution.maxIncreaseKeepingSkyline(grid) << std::endl;
+        {
+            Solution solution;
+            vector<vector<int>> grid = {{3, 0, 8, 4}, {2, 4, 5, 7}, {9, 2, 6, 3}, {0, 3, 1, 0}};
+            std::cout << solution.maxIncreaseKeepingSkyline(grid) << std::endl;
+        }
         std::cout << "=============" << std::endl;
     }
 };
