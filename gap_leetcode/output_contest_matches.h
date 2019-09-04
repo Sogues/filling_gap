@@ -31,6 +31,7 @@ class Solution
             std::ostringstream os;
             os << idx;
             val = os.str();
+            return *this;
         }
         ElemType val;
     };
