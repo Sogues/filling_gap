@@ -5,11 +5,10 @@
 
 namespace Reveal_Cards_In_Increasing_Order
 {
-using std::vector;
-//  algorithm
 //  950.°´µİÔöË³ĞòÏÔÊ¾¿¨ÅÆ
 //  950.Reveal Cards In Increasing Order
 //  https://leetcode-cn.com/problems/reveal-cards-in-increasing-order/
+using std::vector;
 class Solution
 {
   public:
