@@ -1,6 +1,7 @@
 #include "binary_tree_upside_down.h"
 #include "decode_string.h"
 #include "ecode_and_decode_tinyurl.h"
+#include "lexicographical_numbers.h"
 #include "linked_list_random_node.h"
 #include "lru_cache.h"
 #include "max_increase_to_keep_city_skyline.h"
@@ -36,6 +37,7 @@ int main()
     // Permutation::Solution::Test();
     // The_Maze_II::Solution::Test();
     // Linked_List_Random_Node::Solution::Test();
-    Minimum_Increment_To_Make_Array_Unique::Solution::Test();
+    // Minimum_Increment_To_Make_Array_Unique::Solution::Test();
+    Lexicographical_Number::Solution::Test();
     return 0;
 }
