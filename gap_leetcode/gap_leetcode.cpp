@@ -1,4 +1,5 @@
 #include "binary_tree_upside_down.h"
+#include "convex_polygon.h"
 #include "decode_string.h"
 #include "ecode_and_decode_tinyurl.h"
 #include "lexicographical_numbers.h"
@@ -38,6 +39,7 @@ int main()
     // The_Maze_II::Solution::Test();
     // Linked_List_Random_Node::Solution::Test();
     // Minimum_Increment_To_Make_Array_Unique::Solution::Test();
-    Lexicographical_Number::Solution::Test();
+    // Lexicographical_Number::Solution::Test();
+    Convex_Polygon::Solution::Test();
     return 0;
 }
