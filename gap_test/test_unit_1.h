@@ -40,8 +40,14 @@ void test2()
     bool a = 1 << 10;
     std::cout << (int32_t)a << std::endl;
 }
+void test3()
+{
+    int32_t a = -1, b = 1;
+    // -1 0
+    std::cout << (-1 >> 31) << " " << (b >> 31) << std::endl;
+}
 void Test()
 {
-    test2();
+    test3();
 }
 }  // namespace test_unit_1
