@@ -12,6 +12,7 @@
 #include "nested_list_weight_sum_ii.h"
 #include "output_contest_matches.h"
 #include "permutations.h"
+#include "predict_the_winner.h"
 #include "reveal_cards_in_increasing_order.h"
 #include "reverse_linked_list.h"
 #include "reverse_linked_list_ii.h"
@@ -42,6 +43,7 @@ int main()
     // Minimum_Increment_To_Make_Array_Unique::Solution::Test();
     // Lexicographical_Number::Solution::Test();
     // Convex_Polygon::Solution::Test();
-    Binary_Tree_Right_Side_View::Solution::Test();
+    // Binary_Tree_Right_Side_View::Solution::Test();
+    Predict_The_Winner::Solution::Test();
     return 0;
 }
