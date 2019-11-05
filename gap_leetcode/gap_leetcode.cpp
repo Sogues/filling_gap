@@ -5,6 +5,7 @@
 #include "ecode_and_decode_tinyurl.h"
 #include "lexicographical_numbers.h"
 #include "linked_list_random_node.h"
+#include "longest_increasing_subsequence.h"
 #include "lru_cache.h"
 #include "max_increase_to_keep_city_skyline.h"
 #include "maximum_binary_tree.h"
@@ -44,6 +45,7 @@ int main()
     // Lexicographical_Number::Solution::Test();
     // Convex_Polygon::Solution::Test();
     // Binary_Tree_Right_Side_View::Solution::Test();
-    Predict_The_Winner::Solution::Test();
+    // Predict_The_Winner::Solution::Test();
+    Longest_Increasing_Subsequence::Solution::Test();
     return 0;
 }
